@@ -1,0 +1,38 @@
+name: psp-rank
+services:
+  master:
+    build: .
+    command: ["master", "--matrix", "/app/data/${MATRIX_FILE:-matrix-benchmark-64.txt}", "--workers", "3", "--port", "5000", "--repeat", "5", "--result", "/app/results/linux.json"]
+    volumes:
+      - ./data:/app/data:ro
+      - ./results:/app/results
+    networks:
+      - ranknet
+
+  worker1:
+    build: .
+    command: ["worker", "--host", "master", "--port", "5000", "--id", "worker-1"]
+    depends_on:
+      - master
+    networks:
+      - ranknet
+
+  worker2:
+    build: .
+    command: ["worker", "--host", "master", "--port", "5000", "--id", "worker-2"]
+    depends_on:
+      - master
+    networks:
+      - ranknet
+
+  worker3:
+    build: .
+    command: ["worker", "--host", "master", "--port", "5000", "--id", "worker-3"]
+    depends_on:
+      - master
+    networks:
+      - ranknet
+
+networks:
+  ranknet:
+    driver: bridge

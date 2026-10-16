@@ -1,0 +1,5 @@
+# Sample 4 x 4 matrix with rank 3
+1 2 3 4
+2 4 6 8
+0 1 0 1
+0 0 1 1

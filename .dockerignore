@@ -1,0 +1,11 @@
+bin/
+obj/
+tmp/
+logs/
+results/
+*.docx
+*.pdf
+*.png
+*.zip
+*.md
+.git/

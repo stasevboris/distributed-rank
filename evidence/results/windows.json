@@ -1,0 +1,49 @@
+{
+  "measuredAt": "2026-10-05T11:31:11.7840113+00:00",
+  "matrix": "matrix-benchmark-64.txt",
+  "size": 64,
+  "rank": 64,
+  "masterPlatform": "Microsoft Windows 10.0.26200",
+  "runtime": ".NET 8.0.28",
+  "workers": [
+    {
+      "id": "win-worker-2",
+      "platform": "Microsoft Windows 10.0.26200"
+    },
+    {
+      "id": "win-worker-1",
+      "platform": "Microsoft Windows 10.0.26200"
+    },
+    {
+      "id": "win-worker-3",
+      "platform": "Microsoft Windows 10.0.26200"
+    }
+  ],
+  "repeat": 5,
+  "epsilon": 2E-10,
+  "localSamples": [
+    0.1005,
+    0.0874,
+    0.0709,
+    0.0781,
+    0.0685
+  ],
+  "distributedSamples": [
+    36.8845,
+    35.9019,
+    35.6224,
+    36.3801,
+    35.4371
+  ],
+  "networkSamples": [
+    27.8257,
+    27.7783,
+    28.2537,
+    28.9927,
+    29.7038
+  ],
+  "localMeanMs": 0.08108000000000001,
+  "distributedMeanMs": 36.0452,
+  "speedup": 0.002249397978094171,
+  "timing": "One warm-up excluded; connection setup excluded; row transfer included in total."
+}

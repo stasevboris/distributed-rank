@@ -1,0 +1,17 @@
+name: psp-rank-mixed
+services:
+  worker1:
+    build: .
+    command: ["worker", "--host", "host.docker.internal", "--port", "5000", "--id", "linux-worker-1"]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  worker2:
+    build: .
+    command: ["worker", "--host", "host.docker.internal", "--port", "5000", "--id", "linux-worker-2"]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  worker3:
+    build: .
+    command: ["worker", "--host", "host.docker.internal", "--port", "5000", "--id", "linux-worker-3"]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

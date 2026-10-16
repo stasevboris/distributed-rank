@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+logs/
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+TestResults/
+logs/
+results/*.json

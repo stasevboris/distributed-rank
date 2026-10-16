@@ -1,0 +1,49 @@
+{
+  "measuredAt": "2026-10-05T11:29:38.5061867+00:00",
+  "matrix": "matrix-benchmark-64.txt",
+  "size": 64,
+  "rank": 64,
+  "masterPlatform": "Debian GNU/Linux 12 (bookworm)",
+  "runtime": ".NET 8.0.31",
+  "workers": [
+    {
+      "id": "worker-1",
+      "platform": "Debian GNU/Linux 12 (bookworm)"
+    },
+    {
+      "id": "worker-2",
+      "platform": "Debian GNU/Linux 12 (bookworm)"
+    },
+    {
+      "id": "worker-3",
+      "platform": "Debian GNU/Linux 12 (bookworm)"
+    }
+  ],
+  "repeat": 5,
+  "epsilon": 2E-10,
+  "localSamples": [
+    0.1661,
+    0.1282,
+    0.1345,
+    0.0875,
+    0.0827
+  ],
+  "distributedSamples": [
+    51.1258,
+    49.9791,
+    54.6756,
+    49.8025,
+    53.9471
+  ],
+  "networkSamples": [
+    49.221,
+    48.7545,
+    53.4336,
+    48.6238,
+    52.8216
+  ],
+  "localMeanMs": 0.11979999999999999,
+  "distributedMeanMs": 51.90602,
+  "speedup": 0.002308017451540303,
+  "timing": "One warm-up excluded; connection setup excluded; row transfer included in total."
+}
